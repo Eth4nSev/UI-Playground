@@ -3,18 +3,26 @@ import { isLiquidGlassAvailable } from "expo-glass-effect";
 import { Stack } from "expo-router";
 import { useColorScheme } from "react-native";
 
-export default function RootLayout() {
+export default function SettingsLayout() {
   const theme = useColorScheme() ?? "light";
   const colors = Colors[theme];
 
   return (
-    <Stack screenOptions={{ headerShown: false }}>
+    <Stack>
       <Stack.Screen
-        name="modal"
+        name="index"
+        options={{
+          headerTitle: "Settings",
+          headerTransparent: true,
+        }}
+      />
+      <Stack.Screen
+        name="formsheet"
         options={{
           presentation: "formSheet",
           sheetGrabberVisible: true,
-          sheetAllowedDetents: [0.2, 1],
+          sheetAllowedDetents: [0.6],
+          headerShown: false,
           contentStyle: {
             backgroundColor: isLiquidGlassAvailable()
               ? "transparent"
