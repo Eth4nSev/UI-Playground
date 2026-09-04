@@ -3,7 +3,7 @@ import { Text, useColorScheme, View } from "react-native";
 
 export default function Modal() {
   const theme = useColorScheme() ?? "light";
-  const colors = Colors[theme];
+  const colors = Colors[theme as "light" | "dark"];
 
   return (
     <View

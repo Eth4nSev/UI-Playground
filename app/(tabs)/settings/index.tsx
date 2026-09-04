@@ -5,7 +5,7 @@ import { Pressable, Text, useColorScheme, View } from "react-native";
 
 export default function Settings() {
   const theme = useColorScheme() ?? "light";
-  const colors = Colors[theme];
+  const colors = Colors[theme as "light" | "dark"];
 
   return (
     <View

@@ -6,7 +6,7 @@ import { Pressable, useColorScheme } from "react-native";
 
 export default function ExitButton() {
   const theme = useColorScheme() ?? "light";
-  const colors = Colors[theme];
+  const colors = Colors[theme as "light" | "dark"];
 
   return (
     <GlassView

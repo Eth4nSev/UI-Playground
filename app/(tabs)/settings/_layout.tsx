@@ -5,7 +5,7 @@ import { useColorScheme } from "react-native";
 
 export default function SettingsLayout() {
   const theme = useColorScheme() ?? "light";
-  const colors = Colors[theme];
+  const colors = Colors[theme as "light" | "dark"];
 
   return (
     <Stack>

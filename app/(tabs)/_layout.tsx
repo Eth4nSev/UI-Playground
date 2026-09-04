@@ -1,23 +1,23 @@
-import { Icon, Label, NativeTabs } from "expo-router/unstable-native-tabs";
+import { NativeTabs } from "expo-router/unstable-native-tabs";
 
 export default function TabLayout() {
   return (
     <NativeTabs>
       <NativeTabs.Trigger name="index">
-        <Icon sf="clock.fill" />
-        <Label>Recents</Label>
+        <NativeTabs.Trigger.Icon sf="clock.fill" />
+        <NativeTabs.Trigger.Label>Recents</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="shared">
-        <Icon sf="person.2.fill" />
-        <Label>Shared</Label>
+        <NativeTabs.Trigger.Icon sf="person.2.fill" />
+        <NativeTabs.Trigger.Label>Shared</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="browse">
-        <Icon sf="folder.fill" />
-        <Label>Browse</Label>
+        <NativeTabs.Trigger.Icon sf="folder.fill" />
+        <NativeTabs.Trigger.Label>Browse</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="settings" role="search">
-        <Icon sf="gear" />
-        <Label>Settings</Label>
+        <NativeTabs.Trigger.Icon sf="gear" />
+        <NativeTabs.Trigger.Label>Settings</NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
     </NativeTabs>
   );
